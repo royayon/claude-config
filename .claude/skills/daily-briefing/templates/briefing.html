@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Daily briefing {{DATE}}</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --ink: #1c1c1c;
+    --muted: #6b6b6b;
+    --accent: #5a4dcf;
+    --warn: #b25b00;
+    --ok: #2d7a4a;
+    --line: #ececec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.45;
+  }
+  main { max-width: 780px; margin: 0 auto; padding: 32px 24px 64px; }
+  header { margin-bottom: 24px; }
+  header h1 { margin: 0; font-size: 28px; letter-spacing: -0.01em; }
+  header .subtitle { color: var(--muted); margin-top: 4px; font-size: 14px; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin: 20px 0 32px;
+  }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .stat .num { font-size: 24px; font-weight: 600; }
+  .stat .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+
+  section { margin-bottom: 32px; }
+  section h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 6px;
+    margin: 0 0 12px;
+  }
+
+  ul.calendar, ul.todo, ul.done, ul.emails {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.calendar li, ul.todo li, ul.done li, ul.emails li {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+  }
+
+  .time { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 13px; }
+  .event-title { font-weight: 500; }
+  .attendees { color: var(--muted); font-size: 13px; }
+
+  .todo .subject { font-weight: 500; }
+  .todo .meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .todo .desc { margin-top: 4px; font-size: 14px; }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 1px 8px;
+    border-radius: 10px;
+    margin-left: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .badge.multiday { background: #fff0e0; color: var(--warn); }
+  .badge.carried { background: #eef0fa; color: var(--accent); }
+  .badge.done { background: #e6f3ea; color: var(--ok); }
+  .done li { opacity: 0.85; }
+  .done .subject { text-decoration: line-through; }
+
+  .emails .from { color: var(--muted); font-size: 13px; margin-right: 6px; }
+  .emails .subject { font-weight: 500; }
+  .emails .summary { color: var(--ink); font-size: 14px; margin-top: 2px; }
+  .empty { color: var(--muted); font-style: italic; padding: 6px 2px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Daily briefing</h1>
+  <div class="subtitle">{{DATE_LONG}}</div>
+</header>
+
+<div class="stats">
+{{STATS_HTML}}
+</div>
+
+<section>
+  <h2>Today</h2>
+  {{TODAY_HTML}}
+</section>
+
+<section>
+  <h2>Tomorrow</h2>
+  {{TOMORROW_HTML}}
+</section>
+
+<section>
+  <h2>Stuff to do</h2>
+  {{TODO_HTML}}
+</section>
+
+<section>
+  <h2>Stuff taken care of</h2>
+  {{DONE_HTML}}
+</section>
+
+<section>
+  <h2>Emails today</h2>
+  {{EMAILS_HTML}}
+</section>
+
+</main>
+</body>
+</html>
