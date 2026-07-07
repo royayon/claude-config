@@ -20,7 +20,7 @@ Fire-and-poll for one-off Databricks work.
 3. Print each state transition (`PENDING → RUNNING → TERMINATED / SUCCESS`).
 4. Exit 0 on `SUCCESS`, 1 on `FAILED` / `CANCELED` / `INTERNAL_ERROR` / other, 2 on timeout, 3 on config error.
 
-Stdlib only — no `databricks-sdk` install needed. Python 3.9+.
+Stdlib only, no `databricks-sdk` install needed. Python 3.9+.
 
 ## Usage
 
@@ -41,10 +41,10 @@ python .claude/skills/databricks-submit-poll/submit_poll.py \
 
 ## Task JSON
 
-The file passed as `task_json` must match the `jobs/runs/submit` request body. See `example_task.json` for a minimal notebook-task run against a new cluster. For other task shapes (`spark_python_task`, `spark_jar_task`, `spark_submit_task`, `sql_task`, `pipeline_task`), consult the Databricks REST reference — the script does not restrict the payload; it forwards whatever JSON you provide.
+The file passed as `task_json` must match the `jobs/runs/submit` request body. See `example_task.json` for a minimal notebook-task run against a new cluster. For other task shapes (`spark_python_task`, `spark_jar_task`, `spark_submit_task`, `sql_task`, `pipeline_task`), consult the Databricks REST reference. The script does not restrict the payload; it forwards whatever JSON you provide.
 
 ## Notes
 
-- Uses `urllib` from the stdlib rather than `requests`, so no extra installs are needed. In production, the Databricks SDK (`databricks-sdk`) is the recommended path — it handles retries, pagination, and richer error types.
+- Uses `urllib` from the stdlib rather than `requests`, so no extra installs are needed. In production, the Databricks SDK (`databricks-sdk`) is the recommended path: it handles retries, pagination, and richer error types.
 - Timeouts are total wall-clock, not per-poll.
 - The `run_page_url` in the final line is your fastest path to logs.

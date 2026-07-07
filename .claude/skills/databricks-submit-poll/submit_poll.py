@@ -70,7 +70,7 @@ def poll(host: str, token: str, run_id: int, interval: int, timeout: int) -> dic
             if result:
                 line += f" / {result}"
             if msg:
-                line += f" — {msg}"
+                line += f": {msg}"
             print(line, flush=True)
             last_state = current
         if life_cycle in TERMINAL_STATES:
