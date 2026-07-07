@@ -1,0 +1,26 @@
+{
+  "as_of": "2026-07-06",
+  "action_items": [
+    {
+      "source": "Jamie Ortiz <jamie.ortiz@northwood-holdings.example>",
+      "subject": "Q3 planning: your input on the dashboards roadmap",
+      "description": "Please review the Q3 roadmap draft.",
+      "due": "2026-07-11",
+      "multi_day": true
+    },
+    {
+      "source": "Ava Beck <ava.beck@northwood-holdings.example>",
+      "subject": "Deadline reminder: expense report",
+      "description": "Expense reports due by 7/9.",
+      "due": "2026-07-09",
+      "multi_day": false
+    },
+    {
+      "source": "Kai Reyes <kai.reyes@northwood-holdings.example>",
+      "subject": "Please review last month's budget draft",
+      "description": "Budget draft for June needs a sign-off.",
+      "due": "2026-07-06",
+      "multi_day": false
+    }
+  ]
+}

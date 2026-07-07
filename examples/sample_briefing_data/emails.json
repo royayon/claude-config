@@ -1,0 +1,60 @@
+{
+  "emails": [
+    {
+      "from": "Jamie Ortiz <jamie.ortiz@northwood-holdings.example>",
+      "subject": "Q3 planning: your input on the dashboards roadmap",
+      "body": "Hi. Could you please review the attached Q3 roadmap draft and send feedback by 2026-07-11? Want to finalize before the exec sync.",
+      "received_at": "2026-07-07T06:42:00",
+      "read": false
+    },
+    {
+      "from": "Priya Nair <priya.nair@sunbird-bakery.example>",
+      "subject": "New supplier POs waiting for approval",
+      "body": "Two purchase orders came in yesterday. Please review and confirm by EOW so procurement can process them.",
+      "received_at": "2026-07-07T07:15:00",
+      "read": false
+    },
+    {
+      "from": "Devlogs Weekly <weekly@devlogs.example>",
+      "subject": "Newsletter: 42 links from last week",
+      "body": "Weekly digest of engineering blogs and papers. Nothing action-required; skim at your leisure.",
+      "received_at": "2026-07-07T05:30:00",
+      "read": true
+    },
+    {
+      "from": "Michel Duran <michel@acme-guarantee.example>",
+      "subject": "Signed guaranty rider back to you",
+      "body": "Countersigned rider attached. No action needed, filing this for reference.",
+      "received_at": "2026-07-06T18:04:00",
+      "read": true
+    },
+    {
+      "from": "Ava Beck <ava.beck@northwood-holdings.example>",
+      "subject": "Deadline reminder: expense report",
+      "body": "Reminder that expense reports are due by 7/9. Deadline is firm this month.",
+      "received_at": "2026-07-07T08:03:00",
+      "read": false
+    },
+    {
+      "from": "Ren Takahashi <ren@studio-nomad.example>",
+      "subject": "Working draft for the interior fit-out",
+      "body": "Attached is the working draft. Please respond by next week with revisions so we can hand off to fabrication.",
+      "received_at": "2026-07-07T09:12:00",
+      "read": false
+    },
+    {
+      "from": "Zora Fields <zora@zora-fields.example>",
+      "subject": "Lunch Thursday?",
+      "body": "Free for lunch Thursday around noon? No agenda.",
+      "received_at": "2026-07-07T08:47:00",
+      "read": false
+    },
+    {
+      "from": "Payroll <payroll@northwood-holdings.example>",
+      "subject": "July stub available",
+      "body": "Your July pay stub is available in the portal. FYI only.",
+      "received_at": "2026-07-07T04:11:00",
+      "read": true
+    }
+  ]
+}
