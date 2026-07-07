@@ -59,7 +59,7 @@ A single `briefing.html` file. Inline CSS, no external assets. Sections in order
 2. **Today**: calendar events for the "as-of" date, sorted by start time.
 3. **Tomorrow**: same for the next day.
 4. **Stuff to do**: open action items extracted from the emails plus any carried forward from the previous state. Multi-day / week-spanning items are flagged.
-5. **Stuff taken care of**: items that appeared in the previous state but no longer surface today — treated as completed.
+5. **Stuff taken care of**: items that appeared in the previous state but no longer surface today, treated as completed.
 6. **Emails**: one-line summaries of the day's emails.
 
 A companion `briefing.state.json` is written next to the HTML with the raw action-item list. Feed that back in as `--previous-state` on the next run to get carry-forward.
