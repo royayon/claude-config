@@ -1,0 +1,38 @@
+# Repo brief (private, never publish)
+CLAUDE_CODE_REPO_BRIEF.md
+
+# Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# MLflow local tracking
+mlruns/
+mlartifacts/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Build / outputs
+dist/
+build/
+*.log
